@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Showcase</title>
+    <style>
+        /* Embedded CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('pattern.png');
+            background-repeat: repeat;
+            background-size: auto;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .page {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Image Showcase</h1>
+        <p>Explore the collection of selected images, each with its own story and significance.</p>
+        <nav>
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('cat')">A-Cat.jpg</a>
+            <a href="#" onclick="showPage('wallpaper')">Wallpaper Engine GIF</a>
+            <a href="#" onclick="showPage('artwork')">Digital Artwork</a>
+        </nav>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home" class="container page active">
+        <h1>Welcome to the Image Showcase</h1>
+        <p>Click on the links above to view each image and its details.</p>
+    </div>
+
+    <!-- Cat Image Page -->
+    <div id="cat" class="container page">
+        <h1>A-Cat.jpg</h1>
+        <img src="A-Cat.jpg" alt="A cute cat">
+        <h2>Description</h2>
+        <p>This image features a charming cat lounging comfortably, capturing the essence of feline grace and tranquility.</p>
+        <h2>Image File Type Information</h2>
+        <p>File Type: JPEG<br>JPEG is a commonly used method of lossy compression for digital images, particularly for those images produced by digital photography.</p>
+        <h2>Why I Chose This Image</h2>
+        <p>Cats are beloved pets known for their independent and playful nature. This image exemplifies the serene and endearing qualities that make cats such cherished companions.</p>
+        <h2>Source</h2>
+        <p>Image sourced from a personal photography collection.</p>
+    </div>
+
+    <!-- Wallpaper GIF Page -->
+    <div id="wallpaper" class="container page">
+        <h1>Wallpaper Engine GIF</h1>
+        <img src="Wallpaper_Engine_on_Windows_11_-_Animated_GIF.gif" alt="Animated desktop wallpaper">
+        <h2>Description</h2>
+        <p>This animated GIF showcases a dynamic desktop wallpaper from Wallpaper Engine running on Windows 11.</p>
+        <h2>Image File Type Information</h2>
+        <p>File Type: GIF<br>GIF (Graphics Interchange Format) supports both static and animated images.</p>
+        <h2>Why I Chose This Image</h2>
+        <p>The integration of animated wallpapers adds a personalized touch to the user interface.</p>
+        <h2>Source</h2>
+        <p>Image captured from Wallpaper Engine application on Windows 11.</p>
+    </div>
+
+    <!-- Digital Artwork Page -->
+    <div id="artwork" class="container page">
+        <h1>Digital Artwork</h1>
+        <img src="deivb5t-c672bb2c-6801-46c9-a1e9-63a2e5d8fa1a.png" alt="Digital Artwork">
+        <h2>Description</h2>
+        <p>This digital artwork displays a futuristic, cyberpunk-inspired design, showcasing creative digital artistry.</p>
+        <h2>Image File Type Information</h2>
+        <p>File Type: PNG<br>PNG (Portable Network Graphics) supports lossless compression and transparent backgrounds.</p>
+        <h2>Why I Chose This Image</h2>
+        <p>The intricate design and vibrant colors make this artwork visually captivating.</p>
+        <h2>Source</h2>
+        <p>Image sourced from an online digital artist.</p>
+    </div>
+
+</body>
+</html>
