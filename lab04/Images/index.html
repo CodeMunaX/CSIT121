@@ -1,82 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Image Showcase</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('images/pattern.png');
-            background-size: cover;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        img {
-            width: 500px; /* Adjust size as needed */
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border: 2px solid #333;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+      html {
+        font-family: 'Open Sans', sans-serif;
+        background: url('images/pattern.png');
+      }
+
+      body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        position: relative;
+      }
+
+      header {
+        height: 150px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 20px;
+      }
+
+      main {
+        background: #f4f4f4;
+        padding: 20px;
+      }
+
+      article {
+        padding: 20px;
+      }
+
+      img {
+        width: 500px;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border: 2px solid #333;
+        border-radius: 10px;
+      }
+
+      .image-description {
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        margin-top: -10px;
+      }
+
+      footer {
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Image Showcase</h1>
-        <nav>
-            <ul>
-                <li><a href="A-Cat.jpg">A Cat (JPG)</a></li>
-                <li><a href="Wallpaper_Engine_on_Windows_11_-_Animated_GIF.gif">Animated Wallpaper GIF</a></li>
-                <li><a href="deivb5t-c672bb2c-6801-46c9-a1e9-63a2e5d8fa1a.png">Deviant Art (PNG)</a></li>
-            </ul>
-        </nav>
+      <h1>Image Showcase</h1>
     </header>
+
     <main>
-        <article>
-            <h2>Welcome to the Image Showcase</h2>
-            <p>Explore the images, read about their significance, and discover why they were chosen.</p>
-            <img src="images/A-Cat.jpg" alt="A Cat">
-            <img src="images/Wallpaper_Engine_on_Windows_11_-_Animated_GIF.gif" alt="Animated Wallpaper GIF">
-            <img src="images/deivb5t-c672bb2c-6801-46c9-a1e9-63a2e5d8fa1a.png" alt="Deviant Art Image">
-        </article>
+      <article>
+        <h2>Explore Our Featured Images</h2>
+
+        <img src="images/A-Cat.jpg" alt="A Cat">
+        <p class="image-description">
+          <strong>Description:</strong> This is an image of a cat. Cats are popular pets known for their agility, independence, and companionship.<br>
+          <strong>File Type:</strong> JPG<br>
+          <strong>Why This Image?</strong> Cats are adorable and one of the most loved pets worldwide. This image was chosen to showcase the quality of a JPG format.
+        </p>
+
+        <img src="images/Wallpaper_Engine_on_Windows_11_-_Animated_GIF.gif" alt="Animated Wallpaper GIF">
+        <p class="image-description">
+          <strong>Description:</strong> An animated wallpaper used in Windows 11.<br>
+          <strong>File Type:</strong> GIF<br>
+          <strong>Why This Image?</strong> Demonstrates the animation capabilities of the GIF format.
+        </p>
+
+        <img src="images/deivb5t-c672bb2c-6801-46c9-a1e9-63a2e5d8fa1a.png" alt="Deviant Art Image">
+        <p class="image-description">
+          <strong>Description:</strong> This is an image from Deviant Art, showcasing digital artwork.<br>
+          <strong>File Type:</strong> PNG<br>
+          <strong>Why This Image?</strong> Chosen to showcase the high quality and transparency features of PNG.
+        </p>
+      </article>
     </main>
+
     <footer>
-        <p>&copy; 2025 Image Showcase</p>
+      <p>&copy; 2025 Image Showcase</p>
     </footer>
-</body>
-</html> 
+  </body>
+</html>
