@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule & Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0e53e7;
+            margin: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ebe4e4;
+            box-shadow: 0 0 10px rgba(223, 219, 219, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #0fee0f;
+            color: rgb(253, 240, 240);
+        }
+        tr:nth-child(even) {
+            background-color: #f0e5e5;
+        }
+        tr:hover {
+            background-color: #d1e7fd;
+        }
+        form {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #dacdcd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #217bd6;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #268609;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Class Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Course Number</th>
+                <th>Course Name</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CSIT 111</td>
+                <td>Fundementals of Logic and Design</td>
+                <td>Dr. Nnatubemugo (Nat) Ngwum</td>
+            </tr>
+            <tr>
+                <td>CSIT 121</td>
+                <td>Web Standards</td>
+                <td>Veronica Noone</td>
+            </tr>
+            <tr>
+                <td>CSIT 120</td>
+                <td>Diversity in Tech Society</td>
+                <td>Professor Renuka Kumar</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Feedback Form</h2>
+    <form action="#" method="post">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="comments">Your Comments (Max 1600 characters):</label>
+        <textarea id="comments" name="comments" required maxlength="1600" rows="4"></textarea>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>
+        <p>Created by Muna | <a href="mailto:your.email@example.com">munachidimaha@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
