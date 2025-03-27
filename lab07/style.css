@@ -33,7 +33,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #005bb5;
+    background: #e70505;
     border-radius: 5px;
 }
 
@@ -89,7 +89,7 @@ input, textarea, select {
 }
 
 input[type="submit"] {
-    background-color: #0073e6;
+    background-color: #105700;
     color: white;
     border: none;
     padding: 10px;
@@ -98,7 +98,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #005bb5;
+    background-color: #f7eb04;
 }
 
 /* Footer */
