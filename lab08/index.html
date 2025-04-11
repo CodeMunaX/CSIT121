@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Home - Image Showcase</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-image: url('pattern.png');
-      background-repeat: repeat;
+      padding: 0;
+      background-color: #f10303;
+      transition: background-color 0.5s;
     }
+
     .sidenav {
       height: 100%;
       width: 0;
@@ -17,68 +20,75 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #d90723;
+      background-color: #111;
       overflow-x: hidden;
-      transition: 0.3s;
       padding-top: 60px;
+      transition: 0.5s;
     }
+
     .sidenav a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
-      color: #171079;
+      font-size: 25px;
+      color: #c234c7;
       display: block;
       transition: 0.3s;
     }
+
     .sidenav a:hover {
-      background-color: #575757;
+      color: #884c07;
     }
+
     .sidenav .closebtn {
       position: absolute;
       top: 0;
       right: 25px;
       font-size: 36px;
+      margin-left: 50px;
     }
-    #menuBtn {
-      font-size: 30px;
-      cursor: pointer;
-      color: rgb(194, 197, 19);
-      padding: 10px;
-      background-color: #983232;
-      position: fixed;
-    }
-    .container {
-      margin: 60px auto;
-      width: 80%;
-      background: rgb(166, 7, 187);
+
+    #main {
+      transition: margin-left 0.5s;
       padding: 20px;
-      border-radius: 10px;
-      text-align: center;
     }
-    img {
-      width: 60%;
-      border-radius: 5px;
+
+    h1 {
+      color: #58bc10;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <div id="menuBtn" onclick="openNav()">☰ Menu</div>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
     <a href="cat.html">A Cat</a>
-    <a href="wallpaper.html">Wallpaper</a>
-    <a href="artwork.html">Devian Art</a>
+    <a href="wallpaper.html">Animated Wallpaper</a>
+    <a href="artwork.html">Digital Artwork</a>
   </div>
-  <div class="container">
-    <h1>Welcome to My Image Showcase</h1>
-    <p>Explore different types of media using the side menu.</p>
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+
+  <div id="main">
+    <h1>Welcome to My Interactive Website</h1>
+    <p>This site showcases a selection of images including digital artwork, cats, and animated wallpapers. Use the navigation menu to explore!</p>
   </div>
+
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }
+
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
     }
   </script>
 </body>
