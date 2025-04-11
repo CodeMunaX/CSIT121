@@ -10,33 +10,51 @@
       margin: 0;
       padding: 0;
       background-color: #02dff8;
+      transition: background-color 0.5s;
     }
 
     .sidenav {
       height: 100%;
-      width: 220px;
+      width: 0;
       position: fixed;
+      z-index: 1;
       top: 0;
       left: 0;
-      background-color: #9708bb;
-      padding-top: 20px;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
     }
 
     .sidenav a {
-      padding: 12px 20px;
+      padding: 8px 8px 8px 32px;
       text-decoration: none;
-      font-size: 18px;
-      color: #fff;
+      font-size: 25px;
+      color: #818181;
       display: block;
+      transition: 0.3s;
     }
 
     .sidenav a:hover {
-      background-color: #f201b2;
+      color: #f1f1f1;
     }
 
-    .main {
-      margin-left: 240px;
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left 0.5s;
       padding: 20px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
     }
 
     h1 {
@@ -57,14 +75,17 @@
   </style>
 </head>
 <body>
-  <div class="sidenav">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
     <a href="cat.html">A Cat</a>
     <a href="wallpaper.html">Animated Wallpaper</a>
     <a href="artwork.html">Digital Artwork</a>
   </div>
 
-  <div class="main">
+  <span style="font-size:30px;cursor:pointer;padding:10px" onclick="openNav()">&#9776; Open Menu</span>
+
+  <div id="main">
     <h1>Animated Wallpaper</h1>
     <img src="images/wallpaper.gif" alt="Animated Wallpaper Engine">
     <p><strong>Description:</strong> This animated GIF showcases a dynamic desktop wallpaper from Wallpaper Engine running on Windows 11.</p>
@@ -72,5 +93,19 @@
     <p><strong>Why I Chose It:</strong> It looks cool! Adding animated wallpapers gives the user interface a more unique feel.</p>
     <p><strong>Source:</strong> Image captured from Wallpaper Engine application on Windows 11.</p>
   </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "#02dff8";
+    }
+  </script>
 </body>
 </html>
