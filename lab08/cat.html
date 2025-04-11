@@ -1,89 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>A Cat - Image Showcase</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Cat</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-image: url('pattern.png');
-      background-repeat: repeat;
+      padding: 0;
+      background-color: #ebc405;
     }
+
     .sidenav {
       height: 100%;
-      width: 0;
+      width: 220px;
       position: fixed;
-      z-index: 1;
       top: 0;
       left: 0;
-      background-color: #09b2b8;
-      overflow-x: hidden;
-      transition: 0.3s;
-      padding-top: 60px;
+      background-color: #03923c;
+      padding-top: 20px;
     }
+
     .sidenav a {
-      padding: 8px 8px 8px 32px;
+      padding: 12px 20px;
       text-decoration: none;
-      color: #00f62d;
+      font-size: 18px;
+      color: #fff;
       display: block;
-      transition: 0.3s;
     }
+
     .sidenav a:hover {
-      background-color: #8cf403;
+      background-color: #16021a;
     }
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-    }
-    #menuBtn {
-      font-size: 30px;
-      cursor: pointer;
-      color: rgb(115, 12, 12);
-      padding: 10px;
-      background-color: #0e0b0b;
-      position: fixed;
-    }
-    .container {
-      margin: 60px auto;
-      width: 80%;
-      background: rgb(235, 230, 230);
+
+    .main {
+      margin-left: 240px;
       padding: 20px;
-      border-radius: 10px;
-      text-align: center;
     }
+
+    h1 {
+      color: #4515b5;
+    }
+
     img {
-      width: 60%;
-      border-radius: 5px;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <div id="menuBtn" onclick="openNav()">☰ Menu</div>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="sidenav">
     <a href="index.html">Home</a>
     <a href="cat.html">A Cat</a>
-    <a href="wallpaper.html">Wallpaper</a>
-    <a href="artwork.html">Devian Art</a>
+    <a href="wallpaper.html">Animated Wallpaper</a>
+    <a href="artwork.html">Digital Artwork</a>
   </div>
-  <div class="container">
-    <h1>A-Cat.jpg</h1>
+
+  <div class="main">
+    <h1>A Cat</h1>
     <img src="images/A-Cat.jpg" alt="A cute cat">
     <p><strong>Description:</strong> This image shows a charming cat lounging comfortably outside on the streets.</p>
     <p><strong>File Type:</strong> JPEG (compressed image format).</p>
     <p><strong>Why I Chose It:</strong> Cats are adorable and my favorite species! Cats are beloved pets known for their independent and playful nature.</p>
     <p><strong>Source:</strong> Image sourced from a personal photography collection.</p>
   </div>
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-  </script>
 </body>
 </html>
