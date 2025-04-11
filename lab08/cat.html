@@ -2,48 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>A Cat</title>
+  <title>A Cat - Image Showcase</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
       background-image: url('pattern.png');
       background-repeat: repeat;
-      text-align: center;
+    }
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+    }
+    .sidenav a:hover {
+      background-color: #575757;
+    }
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+    #menuBtn {
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+      padding: 10px;
+      background-color: #333;
+      position: fixed;
     }
     .container {
+      margin: 60px auto;
       width: 80%;
-      margin: auto;
       background: white;
       padding: 20px;
       border-radius: 10px;
+      text-align: center;
     }
     img {
       width: 60%;
       border-radius: 5px;
     }
-    nav a {
-      margin: 10px;
-      text-decoration: none;
-      color: blue;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
+  <div id="menuBtn" onclick="openNav()">☰ Menu</div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="cat.html">A Cat</a>
+    <a href="wallpaper.html">Wallpaper</a>
+  </div>
   <div class="container">
     <h1>A-Cat.jpg</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cat.html">A Cat</a>
-      <a href="wallpaper.html">Animated Wallpaper</a>
-      <a href="artwork.html">Digital Artwork</a>
-    </nav>
-    <img src="A-Cat.jpg" alt="A cute cat">
-    <p><strong>Description:</strong> A charming cat lounging comfortably on the street.</p>
-    <p><strong>File Type:</strong> JPEG</p>
-    <p><strong>Why I Chose It:</strong> Cats are adorable and my favorite species! They're playful and independent.</p>
-    <p><strong>Source:</strong> Personal photography collection.</p>
+    <img src="images/A-Cat.jpg" alt="A cute cat">
+    <p><strong>Description:</strong> This image shows a charming cat lounging comfortably outside on the streets.</p>
+    <p><strong>File Type:</strong> JPEG (compressed image format).</p>
+    <p><strong>Why I Chose It:</strong> Cats are adorable and my favorite species! Cats are beloved pets known for their independent and playful nature.</p>
+    <p><strong>Source:</strong> Image sourced from a personal photography collection.</p>
   </div>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
 </body>
 </html>
