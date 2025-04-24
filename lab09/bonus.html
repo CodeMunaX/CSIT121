@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Viewer</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Employee Directory</h1>
+  <button id="toggleButton" onclick="toggleTable()">Get Employee Data</button>
+  <div id="employeeContainer"></div>
+
+  <script>
+    let tableVisible = false;
+
+    function toggleTable() {
+      const container = document.getElementById("employeeContainer");
+      const button = document.getElementById("toggleButton");
+
+      if (!tableVisible) {
+        fetch('employees.xml')
+          .then(response => response.text())
+          .then(xmlString => {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+            const employees = xmlDoc.getElementsByTagName("employee");
+
+            let html = "<table><tr><th>ID</th><th>Name</th><th>Title</th><th>Division</th><th>Building</th><th>Room</th></tr>";
+
+            for (let i = 0; i < employees.length; i++) {
+              const emp = employees[i];
+              const id = emp.getAttribute("id");
+              const fname = emp.getElementsByTagName("firstname")[0].textContent;
+              const lname = emp.getElementsByTagName("lastname")[0].textContent;
+              const title = emp.getElementsByTagName("title")[0].textContent;
+              const division = emp.getElementsByTagName("division")[0].textContent;
+              const building = emp.getElementsByTagName("building")[0].textContent;
+              const room = emp.getElementsByTagName("room")[0].textContent;
+
+              html += `<tr>
+                <td>${id}</td>
+                <td>${fname} ${lname}</td>
+                <td>${title}</td>
+                <td>${division}</td>
+                <td>${building}</td>
+                <td>${room}</td>
+              </tr>`;
+            }
+
+            html += "</table>";
+            container.innerHTML = html;
+            button.textContent = "Close Employee Data";
+            tableVisible = true;
+          })
+          .catch(err => {
+            container.innerHTML = "<p>Error loading employee data.</p>";
+          });
+      } else {
+        container.innerHTML = "";
+        button.textContent = "Get Employee Data";
+        tableVisible = false;
+      }
+    }
+  </script>
+</body>
+</html>

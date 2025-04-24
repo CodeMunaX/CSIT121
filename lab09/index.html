@@ -1,75 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Employee Viewer</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    th, td {
-      border: 1px solid #7ce2af;
-      padding: 8px 12px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Employee Directory</h1>
-  <button id="toggleButton" onclick="toggleTable()">Get Employee Data</button>
-  <div id="employeeContainer"></div>
+    <title>Reads the XML data using JavaScript</title>
 
-  <script>
-    let tableVisible = false;
+    <!-- CSS -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-    function toggleTable() {
-      const container = document.getElementById("employeeContainer");
-      const button = document.getElementById("toggleButton");
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
 
-      if (!tableVisible) {
-        fetch('employees.xml')
-          .then(response => response.text())
-          .then(xmlString => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(xmlString, "application/xml");
-            const employees = xmlDoc.getElementsByTagName("employee");
+        tr:nth-child(even) {
+            background-color: #7ce2af
+        }
 
-            let html = "<table><tr><th>ID</th><th>Name</th><th>Title</th><th>Division</th><th>Building</th><th>Room</th></tr>";
+        th {
+            background-color: #7c0f65;
+            color: white;
+        }
 
-            for (let i = 0; i < employees.length; i++) {
-              const emp = employees[i];
-              const id = emp.getAttribute("id");
-              const fname = emp.getElementsByTagName("firstname")[0].textContent;
-              const lname = emp.getElementsByTagName("lastname")[0].textContent;
-              const title = emp.getElementsByTagName("title")[0].textContent;
-              const division = emp.getElementsByTagName("division")[0].textContent;
-              const building = emp.getElementsByTagName("building")[0].textContent;
-              const room = emp.getElementsByTagName("room")[0].textContent;
+        .button {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            border: 4px solid rgb(55, 12, 211);
+            background: rgba(20, 192, 4, 0.5);
+            color: rgb(230, 36, 78);
+            outline: none;
+            border-radius: 30px;
+            font-size: 30px;
+            width: 500px;
 
-              html += `<tr>
-                <td>${id}</td>
-                <td>${fname} ${lname}</td>
-                <td>${title}</td>
-                <td>${division}</td>
-                <td>${building}</td>
-                <td>${room}</td>
-              </tr>`;
+        }
+
+        .button:hover {
+            color: black;
+            background: white;
+        }
+    </style>
+
+    <!--JavaScript-->
+    <script>
+        function loadXMLDoc() {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+
+                // Request finished and response 
+                // is ready and Status is "OK"
+                if (this.readyState == 4 && this.status == 200) {
+                    empDetails(this);
+                }
+            };
+
+            // employee.xml is the external xml file
+            xmlhttp.open("GET", "employee.xml", true);
+            xmlhttp.send();
+        }
+
+        function empDetails(xml) {
+            let i;
+            let xmlDoc = xml.responseXML;
+            let table =
+                `<tr><th>Firstname</th><th>Lastname</th>
+                    <th>Title</th><th>Division</th>
+                    <th>Building</th><th>Room</th>
+                </tr>`;
+            let x = xmlDoc.getElementsByTagName("employee");
+
+            // Start to fetch the data by using TagName 
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("firstname")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("lastname")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("title")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("division")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("building")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("room")[0]
+                        .childNodes[0].nodeValue + "</td></tr>";
             }
 
-            html += "</table>";
-            container.innerHTML = html;
-            button.textContent = "Close Employee Data";
-            tableVisible = true;
-          })
-          .catch(err => {
-            container.innerHTML = "<p>Error loading employee data.</p>";
-          });
-      } else {
-        container.innerHTML = "";
-        button.textContent = "Get Employee Data";
-        tableVisible = false;
-      }
-    }
-  </script>
+            // Print the xml data in table form
+            document.getElementById("id").innerHTML = table;
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <button type="button" class="button" onclick="loadXMLDoc()">
+            Get Employees Details
+        </button>
+    </center>
+
+    <br><br>
+    <table id="id"></table>
 </body>
+
 </html>
