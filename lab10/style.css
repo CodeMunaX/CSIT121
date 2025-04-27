@@ -1,0 +1,58 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/linear-flat-abstract-lines-pattern_23-2148953381.avif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header, footer {
+    background-color: rgba(66, 243, 7, 0.8);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ed0e3b;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 20px;
+    background-color: rgba(244, 0, 0, 0.85);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+  }
+  
+  section h2 {
+    color: #1c24b7;
+  }
+  
+  footer {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }  
