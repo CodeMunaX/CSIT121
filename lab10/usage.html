@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battery Status API - How is it Used?</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Battery Status API</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">What is it?</a></li>
+        <li><a href="importance.html">Why is it important?</a></li>
+        <li><a href="usage.html">How is it used?</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>How is the Battery Status API Used?</h2>
+      <p>
+        The Battery Status API is used by developers to check the charging status and battery level of a user's device. Websites can then use this information to adjust their behavior. For example, a video streaming site might automatically lower the video quality if it sees the battery is very low. Another website might turn off extra features like auto-playing videos or background music to save power. These small changes can really help users who need to make their battery last longer.
+      </p>
+      <p>
+        Using the Battery Status API is very simple in JavaScript. Developers call `navigator.getBattery()` and work with the returned battery object. This object has properties like `charging`, `level`, and `chargingTime` that tell you important information. Developers can even listen for events like `chargingchange` to know when the battery starts or stops charging. With just a few lines of code, websites can become more interactive and respectful of a user's device state.
+      </p>
+      <p>
+        A real-world example would be a mobile game that changes how often it saves progress based on battery level. If the battery is low, it could save the game more often to avoid the player losing their progress if the device shuts down. Another example could be an online shopping site that disables image carousels and large ads when a user's battery is low. In every case, the goal is the same: to give users a smoother, smarter experience that cares about their needs.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Muna's Web Standards Project</p>
+  </footer>
+</body>
+</html>
