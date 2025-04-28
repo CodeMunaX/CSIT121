@@ -32,6 +32,37 @@
         A real-world example would be a mobile game that changes how often it saves progress based on battery level. If the battery is low, it could save the game more often to avoid the player losing their progress if the device shuts down. Another example could be an online shopping site that disables image carousels and large ads when a user's battery is low. In every case, the goal is the same: to give users a smoother, smarter experience that cares about their needs.
       </p>
     </section>
+
+    <section>
+      <h3>Live Example of Battery Status</h3>
+      <p id="batteryStatus">Loading battery information...</p>
+    </section>
+
+    <script>
+      // Access the Battery Status API
+      navigator.getBattery().then(function(battery) {
+        // Displaying battery information
+        const batteryStatus = document.getElementById('batteryStatus');
+        batteryStatus.textContent = `Battery Level: ${battery.level * 100}%`;
+
+        if (battery.charging) {
+          batteryStatus.textContent += " (Charging)";
+        } else {
+          batteryStatus.textContent += " (Not Charging)";
+        }
+
+        // You can also listen for changes in the battery status
+        battery.addEventListener('chargingchange', function() {
+          batteryStatus.textContent = `Battery Level: ${battery.level * 100}% (${battery.charging ? "Charging" : "Not Charging"})`;
+        });
+
+        battery.addEventListener('levelchange', function() {
+          batteryStatus.textContent = `Battery Level: ${battery.level * 100}%`;
+        });
+      }).catch(function(error) {
+        console.error("Battery API not supported on this device.", error);
+      });
+    </script>
   </main>
 
   <footer>
