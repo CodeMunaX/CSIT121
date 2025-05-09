@@ -1,0 +1,87 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header, footer {
+  background-color: #003366;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #003366;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #e6f2ff;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+}
+
+/* CSS image sample */
+body::before {
+  content: "";
+  background-image: url('../images/bg-pattern.png');
+  background-repeat: repeat;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0.05;
+  z-index: -1;
+}
