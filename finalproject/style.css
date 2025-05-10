@@ -77,7 +77,7 @@ table th, table td {
 }
 
 table th {
-  background-color: #870974;
+  background-color: #83137c;
   color: white;
 }
 
@@ -134,5 +134,5 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #f008b2;
+  background-color: #83137c;
 }
