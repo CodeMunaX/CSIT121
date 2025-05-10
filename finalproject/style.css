@@ -58,7 +58,7 @@ footer {
 }
 
 body.index {
-  background: url('../Images/download.png') no-repeat center top;
+  background-image: url('download.png');
   background-size: cover;
 }
 
