@@ -2,104 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Work | Muna's Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Labs | CSIT 121 Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #4fc3f7;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1a237e;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e3f2fd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
+    }
+
+    ul {
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ccc;
+      }
+      td:before {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        width: 45%;
+        padding-right: 1rem;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+      td:nth-of-type(1):before { content: "Lab Name"; }
+      td:nth-of-type(2):before { content: "Description"; }
+      td:nth-of-type(3):before { content: "Link"; }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Muna's Portfolio</h1>
+    <h1>My Lab Projects</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="labs.html" aria-current="page">My Work</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-        <li><a href="reflection.html">Lessons Learned</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="labs.html">Labs</a>
+      <a href="about.html">About</a>
+      <a href="reflection.html">Reflection</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>My Web Development Work</h2>
-      <p>Below is a collection of my labs, created throughout the CSIT 121 semester. Each lab explores different skills such as HTML, CSS, layout, responsiveness, and user experience.</p>
-    </section>
+    <h2>CSIT 121 Labs Overview</h2>
 
-    <section>
-      <h3>Technologies Used:</h3>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-      </ul>
-    </section>
+    <table>
+      <thead>
+        <tr>
+          <th>Lab Name</th>
+          <th>Description</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lab 01</td>
+          <td>Introduction and personal webpage using basic HTML</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab01/aboutme.html" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 02</td>
+          <td>HTML blog page with proper structure and validation</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab02/index.html" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 03</td>
+          <td>HTML and CSS structure, layout improvements</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab03/index.html" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 04</td>
+          <td>Image layout and gallery creation</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab04/Images/index.html" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 05</td>
+          <td>Color and design exploration</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab05/" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 06</td>
+          <td>Website usability and accessibility critique</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab06/" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 07</td>
+          <td>Tier list built with HTML and CSS</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab07/tierlist.html" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 08</td>
+          <td>JavaScript-driven interactive menu</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab08/" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 09</td>
+          <td>Multi-page navigation and page linking</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab09/" target="_blank">View</a></td>
+        </tr>
+        <tr>
+          <td>Lab 10</td>
+          <td>Copyright & Fair Use educational site</td>
+          <td><a href="https://codemunax.github.io/CSIT121/lab10/usage.html" target="_blank">View</a></td>
+        </tr>
+      </tbody>
+    </table>
 
-    <section>
-      <h3>Lab Table</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Lab</th>
-            <th>Description</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Lab 01</td>
-            <td>Created a basic "About Me" page using simple HTML structure.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab01/aboutme.html" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 02</td>
-            <td>Built a blog layout using HTML5 semantic tags and lists.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab02/index.html" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 03</td>
-            <td>Practiced image embedding and alignment using HTML and CSS.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab03/index.html" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 04</td>
-            <td>Created a multi-page image gallery site with navigation.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab04/Images/index.html" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 05</td>
-            <td>Reviewed and applied WCAG accessibility principles to a webpage.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab05/" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 06</td>
-            <td>Conducted a UX evaluation of the NASA website using structured HTML.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab06/" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 07</td>
-            <td>Designed a tier list using semantic tags and custom styling.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab07/tierlist.html" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 08</td>
-            <td>Added an interactive side navigation menu using JavaScript.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab08/" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 09</td>
-            <td>Explored website optimization and performance best practices.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab09/" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Lab 10</td>
-            <td>Created an HTML page on internet safety and proper image usage.</td>
-            <td><a href="https://codemunax.github.io/CSIT121/lab10/usage.html" target="_blank">View</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <h3>Technologies Used</h3>
+    <ul>
+      <li>HTML5 & Semantic Elements</li>
+      <li>CSS3 Styling & Layout Techniques</li>
+      <li>JavaScript for Interactivity</li>
+    </ul>
   </main>
-
+</body>
+</html>
   <aside>
     <p>Every lab on this page helped me grow as a web developer.</p>
   </aside>
