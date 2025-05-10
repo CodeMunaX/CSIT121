@@ -57,9 +57,11 @@ footer {
   margin-top: auto;
 }
 
-body.index {
-  background-image: url('download.png');
+.hero {
+  background-image: url('Images/Seamless-Pattern-Purple-Geometric-Square-Graphics-5151372-1.jpg');
   background-size: cover;
+  background-position: center;
+  height: 250px;
 }
 
 /* Table Styles */
