@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio | Reflection</title>
+  <title>Lessons Learned</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .reflection-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.8;
+    }
+    .reflection-section h2 {
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .reflection-section {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>Lessons Learned</h1>
@@ -19,19 +37,22 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Reflections on This Project</h2>
-      <p>Completing this final project taught me how to organize and unify various independent projects into a single cohesive website. I faced challenges with aligning navigation and maintaining consistent styling, but I also learned how powerful CSS can be in creating clean, responsive designs.</p>
-
-      <p>While testing across browsers like Chrome, Firefox, and mobile Safari, I noticed some layout issues that required tweaking my media queries. It reminded me of the importance of mobile-first design and accessibility in building inclusive websites.</p>
-
-      <p>Throughout CSIT 121, I’ve gained a solid understanding of HTML structure, semantic tags, accessibility, responsive design, and CSS layouts. These skills will help me create secure and user-friendly interfaces in future cybersecurity roles and tech projects.</p>
-    </section>
+  <main class="reflection-section">
+    <h2>Final Project Reflections</h2>
+    <p>
+      Building this final portfolio was both challenging and exciting. I had to revisit every lab and make sure the design, structure, and layout felt unified across the site. Learning how to work with CSS media queries and responsive design was especially valuable, as it helped me think more deeply about user experience across devices. Getting everything to look consistent across labs — while making it all feel modern — pushed me to problem-solve creatively.
+    </p>
+    <p>
+      Testing the site on multiple browsers and devices showed me how important it is to code with flexibility in mind. Something that looked good on a desktop sometimes didn’t work right on mobile, so I learned to use flexbox, percentages, and breakpoints to adapt layouts dynamically. This taught me to be more mindful of accessibility and real-world use.
+    </p>
+    <p>
+      Overall, this course has given me a strong foundation in web development. I now understand the structure of HTML, how CSS styles and arranges content, and how JavaScript adds interactivity. I also gained confidence in using GitHub Pages and publishing my work online. I'm leaving the semester proud of how far I’ve come — and excited to keep building.
+    </p>
   </main>
 
   <footer>
-    <p>&copy; 2025 Muna | Reflections from CSIT 121</p>
+    <p>&copy; 2025 Muna. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
