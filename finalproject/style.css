@@ -58,9 +58,8 @@ footer {
   margin-top: auto;
 }
 
-/* Hero Image for Home Page via CSS */
 body.index {
-  background: url('../images/download.png') no-repeat center top;
+  background: url('../Images/download.png') no-repeat center top;
   background-size: cover;
 }
 
